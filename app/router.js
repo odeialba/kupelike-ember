@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('about_us');
   this.route('map', { path: '/map/:id'});
   this.route('item');
+  this.route('index2');
 });
 
 export default Router;

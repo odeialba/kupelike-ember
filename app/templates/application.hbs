@@ -18,7 +18,7 @@
                     <a id="navbar-ham" class="navbar-ham toggle-button visible-xs visible-sm"><i class="fa fa-bars fa-4x" aria-hidden="true"></i></a>
                 </div>
                 <div class="col-xs-4 col-lg-3 navbar-header p-x-0">
-                    {{#link-to 'index' class="navbar-title" id="navbar-title"}}
+                    {{#link-to 'index2' class="navbar-title" id="navbar-title"}}
 					    Kupe<img class="img-logo"/>Like
 					{{/link-to}}
      			</div>
@@ -46,17 +46,17 @@
                         {{!--{{#link-to 'place' place name=place.name}}--}}
                         {{!--<a name='{{place.name}}' href='"+route+"'>--}}
                             <div class='col-xs-offset-2 col-xs-5'>
-                                {{#link-to 'place' place name=place.name}}<h2 class='card-title text-uppercase'>{{place.name}}</h2>{{/link-to}}
+                                {{#link-to 'place' place.id name=place.name}}<h2 class='card-title text-uppercase'>{{place.name}}</h2>{{/link-to}}
                                 <div class='card-margen-20'>
-                                    {{#link-to 'place' place name=place.name}}<p class='card-description' id='descripcion'>{{place.description}}</p>{{/link-to}}
-                                    {{#link-to 'map' place}}
+                                    {{#link-to 'place' place.id name=place.name}}<p class='card-description' id='descripcion'>{{place.description}}</p>{{/link-to}}
+                                    {{#link-to 'map' place.id}}
                                         <button type="button" class="btn btn-default">{{t 'paginas.sidrerias.llegar'}}</button>
                                     {{/link-to}}
                                 </div>
                             </div>
                         {{!--</a>--}}
                         {{!--{{/link-to}}--}}
-                        {{#link-to 'place' place name=place.name}}
+                        {{#link-to 'place' place.id name=place.name}}
                         {{!--<a name='"+attributes.name+"' href='"+route+"'>--}}
                             <div class='col-xs-4'>
                                 <div class='card-sidreria'>
@@ -85,7 +85,7 @@
         </ul>
         <ul class="menu-links">
             {{!--{{menu-active (t 'paginas_estaticas.menu.inicio') index}}--}}
-            {{#link-to 'index' class=(menu-active 'index' menu.page) action='menuClick'}}<li>{{t 'paginas_estaticas.menu.inicio'}}</li>{{/link-to}}
+            {{#link-to 'index2' class=(menu-active 'index2' menu.page) action='menuClick'}}<li>{{t 'paginas_estaticas.menu.inicio'}}</li>{{/link-to}}
             {{#link-to 'places' class=(menu-active 'places' menu.page)}}<li>{{t 'paginas_estaticas.menu.sidrerias'}}</li>{{/link-to}}
             {{#link-to 'maps' class=(menu-active 'maps' menu.page)}}<li>{{t 'paginas_estaticas.menu.mapa'}}</li>{{/link-to}}
             {{#link-to 'contact' class=(menu-active 'contact' menu.page)}}<li>{{t 'paginas_estaticas.menu.contacto'}}</li>{{/link-to}}
@@ -132,7 +132,7 @@
             <div class="row">
                 <div class="col-xs-12 font-face-primary"> 
                     <ul class="list-inline footer-menu text-uppercase footer-menu-site">
-                    	<li>{{link-to (t 'paginas_estaticas.footer.inicio') "index"}}</li>
+                    	<li>{{link-to (t 'paginas_estaticas.footer.inicio') "index2"}}</li>
                         <li>{{link-to (t 'paginas_estaticas.footer.mapa') "maps"}}</li>
                         <li>{{link-to (t 'paginas_estaticas.footer.sidrerias') "places"}}</li>
                         <li>{{link-to (t 'paginas_estaticas.footer.contacto') "contact"}}</li>

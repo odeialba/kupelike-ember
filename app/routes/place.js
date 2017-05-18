@@ -4,7 +4,9 @@ export default Ember.Route.extend({
   model: function(params) {
     // console.log(params);
     
-    return this.store.find("place", params.id)
+    return this.store.find("place", params.id).then(function(place){
+      return place.reload();
+    })
   },
   setupController: function(controller, model) {
     this._super(...arguments);

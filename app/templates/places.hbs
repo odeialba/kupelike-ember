@@ -6,7 +6,7 @@
         {{#each model as |place|}}
             <div class="col-xs-6 col-lg-4">
                 <div class="card">
-                	{{#link-to 'place' place class='card-link'}}
+                	{{#link-to 'place' place.id class='card-link'}}
         	            <div class="card-direction text-uppercase text-center"><h4>{{place.town}}</h4></div>
         	            <img class="card-image img-responsive" src="{{place.picture}}">
         	            <h2 class="card-title text-uppercase">{{place.name}}</h2>
