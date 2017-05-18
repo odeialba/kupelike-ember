@@ -3,14 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kupelike</title>
+    <title>KupeLike</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="user-scalable=yes">
+    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+    <script src="{{rootURL}}jquery.min.js"></script>
+    <script src="{{rootURL}}bootstrap.min.js"></script>
+    <script src="{{rootURL}}estadisticas.min.js"></script>
 
     {{content-for "head"}}
 
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/kupelike.css">
+    
+    <link rel="shortcut icon" href="{{rootURL}}img/favicon.ico" type="image/ico"/>
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link rel="stylesheet" href="{{rootURL}}style.css">
+    <!--<link rel="stylesheet" href="{{rootURL}}assets/kupelike-ember.css">-->
+    <link rel="stylesheet" href="{{rootURL}}assets/bootstrap.min.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto|Lobster|Lato" rel="stylesheet">
 
     {{content-for "head-footer"}}
   </head>
@@ -21,5 +34,7 @@
     <script src="{{rootURL}}assets/kupelike.js"></script>
 
     {{content-for "body-footer"}}
+    <script type="text/javascript" src="{{rootURL}}script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQWPiW2qkBRj4BXmEwFS2XMm2kzwKH82M"></script>
   </body>
 </html>

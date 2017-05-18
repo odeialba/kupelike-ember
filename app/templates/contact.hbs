@@ -1,0 +1,18 @@
+<div class="container-fluid content">
+    
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+            <div class="row">
+                <h1 class="mtitle title-padding text-center">{{t 'paginas.contacto.titulo'}}</h1>
+            </div>
+            <div class="row">
+                <form class="contact_form" action="https://kupelike-rails.herokuapp.com/contact" method="post">
+                    <input type="text" name="message[name]" placeholder="{{t 'paginas.contacto.nombre'}}" class="formulario" required="required">
+                    <input type="email" name="message[email]" placeholder="{{t 'paginas.contacto.email'}}" class="formulario" required="required">
+                    <textarea name="message[content]" placeholder="{{t 'paginas.contacto.motivo'}}" cols="40" rows="6" class="formulario" required="required"></textarea>
+                    <input type="submit" id="enviar" value="{{t 'paginas.contacto.enviar'}}" class="formulario">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

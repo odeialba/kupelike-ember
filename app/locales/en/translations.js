@@ -1,0 +1,167 @@
+export default {
+	"paginas_estaticas": {
+		"menu": {
+			"inicio": "Home",
+			"mapa": "Map",
+			"sidrerias": "Cider Houses",
+			"contacto": "Contact",
+			"nosotros": "About us",
+			"acceder": {
+				"usuario": "Username",
+				"contrasena": "Password",
+				"acceder": "Log in",
+				"red": "You are not part of our network yet?"
+			},
+			"accederr": "Log in / Register",
+			"admuser": "Manage users",
+			"admsidre": "Manage cider houses",
+			"misidre": "My cider house",
+			"perfil": "My profile",
+			"change_password": "Change my password",
+			"ayuda": "Help",
+			"salir": "Log out",
+			"buscar": "Search"
+		},
+		"landing": {
+			"txotx": "A good conversation always starts with a Txotx!",
+			"subtitulo": "With your help, we keep alive the most famous tradition of our culture.",
+			"encuentra": "Find your cider house"
+		},
+		"footer": {
+			"inicio": "Home",
+			"mapa": "Map",
+			"sidrerias": "Cider Houses",
+			"contacto": "Contact",
+			"nosotros": "About us"
+		}
+	},
+	"labels": {
+		"usuario": {
+			"nombre": "Name:",
+			"apellidos": "Surnames:",
+			"sidreria": "Cider house:",
+			"telefono": "Phone:",
+			"email": "Email:",
+			"username": "Username:",
+			"acciones": "Actions:"
+		},
+		"kupela": {
+			"nombre": "Name:",
+			"descripcion": "Description:",
+			"ano": "Year:",
+			"foto": "Picture:"
+		},
+		"sidreria": {
+			"nombre": "Name:",
+			"descripcion": "Description:",
+			"horario": "Txotx time:",
+			"foto": "Picture:",
+			"ubicacion": "Location:",
+			"direccion": "Address:",
+			"coordenadas": "Coordinates:",
+			"acciones": "Actions:",
+			"telefono": "Phone number:",
+			"email": "Email:"
+		},
+		"registro": {
+			"nombreyape": "Name and surnames:",
+			"email": "Email:",
+			"phone": "Contact phone number:",
+			"nombresidre": "Name of the cider house:",
+			"direccion": "Address:",
+			"descripcion": "Description:"
+		}
+	},
+	"boton": {
+		"actualizar": "Update",
+		"acceder": "Log in",
+		"aviso": "Get notification",
+		"cancelar": "Cancel",
+		"change_password": "Change my password",
+		"crear": "Create",
+		"editar": "Update",
+		"eliminar": "Delete",
+		"embotellado": "Bottled",
+		"enviar": "Send",
+		"guardar": "Save",
+		"manage": "Manage",
+		"modificar": "Change",
+		"mostrar": "Show",
+		"selfoto": "Choose picture",
+		"stats": "Statistics"
+	},
+	"titulos": {
+		"mapa": "Map",
+		"sidrerias": "Cider Houses",
+		"contacto": "Contact us",
+		"nosotros": "About us",
+		"acceder": "Access",
+		"editperfil": "Edit profile",
+		"editusuario": "Edit user",
+		"editkupela": "Edit kupela",
+		"editsidre": "Edit cider house",
+		"newkupela": "New kupela",
+		"newsidre": "New cider house",
+		"newusuario": "New user",
+		"contrasena": "Change password",
+		"perfilsidre": "Profile of the cider house",
+		"listakupelas": "List of the kupelas",
+		"login": "Access to KupeLike"
+	},
+	"alerts": {
+		"voto": {
+			"mas": "Vote added successfully!",
+			"menos": "Vote deleted successfully!"
+		},
+		"aviso": {
+			"mas": "You will be noticed when the cider is bottled!",
+			"menos": "You WILL NOT be noticed when the cider is bottled!"
+		},
+		"votoaviso": {
+			"mas": "Vote added successfully!\nYou will be noticed when the cider is bottled!",
+			"menos": "Vote deleted successfully!\nYou WILL NOT be noticed when the cider is bottled!"
+		}
+	},
+	"paginas": {
+		"mapa": {
+			"titulo": "Map",
+		},
+		"sidrerias": {
+			"titulo": "Cider Houses",
+			"llegar": "Directions",
+			"contacto": "Contact"
+		},
+		"contacto": {
+			"titulo": "Contact us",
+			"nombre": "Write your name and surnames",
+			"email": "Write your Email",
+			"motivo": "Tell us your query so we can answer you as soon as possible.",
+			"enviar": "Send"
+		},
+		"nosotros": {
+			"titulo": "About us",
+			"texto1": "A new aplication has been developed by the users of Liderazgo Emprendedor e Innovación of the university of Mondragón, colaborating with the students of Web Aplication Development of I.E.S Zubiri Manteo B.H.I. and the students of Mantenimiento electrónico of CIFP Don Bosco LHII, called KupeLike.",
+			"texto2": "KupeLike shows the cider houses of the Spanish territory with their barrels and a voting and reputation system for each one of them. The votes are shown in the Web application and in the displays located in the barrels.",
+			"texto3": "It will also have an interactive map and updated information for the interest of the users."
+			// "texto2": ""
+			// "texto3": ""
+			// "texto4": ""
+			// "texto5": ""
+		},
+		"slider": {
+			"desarrollo": "Web Aplication Developer",
+		},
+		"registrasidre": {
+			"titulo": "Register your cider house",
+			"subtitulo": "Fill this form to be part of the KupeLike community",
+			"merece": "Your cider deserves it!"
+		},
+		"login": {
+			"titulo": "Access to KupeLike",
+			"usuario": "Username",
+			"contrasena": "Password",
+			"cuenta": "You don't have an account?",
+			"solicitar": "Ask for access to the aplication"
+		}
+	}
+};

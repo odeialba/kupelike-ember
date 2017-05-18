@@ -1,0 +1,71 @@
+   <div class="container">
+        <div class="row single-sagardotegi">
+            <div class="col-xs-6">
+                <h1 class="card-title text-uppercase">{{model.name}}</h1>
+                    <p class="single-description" id="descripcion">{{model.description}}</p>
+                    <p class="single-description" id="descripcion">{{model.time}}</p>
+                    {{#link-to 'map' model class='llegar'}}
+                      <button type="button" class="btn btn-default">{{t 'paginas.sidrerias.llegar'}}</button>
+                    {{/link-to}}
+                    <button id="contactoSidreria" type="button" class="btn btn-default">{{t 'paginas.sidrerias.contacto'}}</button>
+                    <div id="mostrarcontacto">
+                        <p class="single-description">{{model.address}}</p>
+                        <a href="mailto:{{model.email}}"><p class="single-description">{{model.email}}</p></a>
+                        <a href="tel:{{model.phone}}"><p class="single-description">{{model.phone}}</p></a> 
+                    </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="card-single-direction text-uppercase text-center"><h4>{{model.town}}</h4></div>
+                <img class="single-img img-responsive img-rounded" src="{{model.picture}}">
+            </div>
+        </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    
+<div class="container-fluid">
+        
+    <div class="row p-x-1 kupela-list">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 col-xl-6 col-xl-offset-3">
+          <!-- Stats window -->
+       {{#each model.items as |item|}}
+       {{item-statistics item=item}}
+    <!-- FIN Stats window -->
+
+        <div class="row single-kupela">
+            <div class="col-xs-4 vote-wrapper">
+                <div class="row text-center">
+                    <div class="col-xs-12 p-x-0">
+                    <img src="{{item.picture}}" alt="kupela" class="single-kupela-img img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3 id="{{item.id}}" class="vote-count"><div id="test"></div>{{item.votes_count}}<i class="fa fa-heart fa-1x" aria-hidden="true"></i></h3>
+                    </div>
+                     <div class="col-xs-6 p-x-0">   
+                        <button class="vote-button pull-right">
+                            <a class="btn-facebook" data-numero="{{item.id}}" data-button="like">
+                                <img class="vote-logo" src="{{rootURL}}/img/logo_reverse.png">
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <div class="caption">
+                    <h3 class="card-title text-uppercase">{{item.name}}</h3>
+                    <p class="single-description">{{item.description}}</p>
+                    <button class="btn btn-primary btn-aviso pull-right" data-numero="{{item.id}}" data-button="aviso">{{t 'boton.aviso'}}</button>
+                    <button class="btn btn-primary btn-stats pull-right" id="stats{{item.id}}">{{t 'boton.stats'}}</button>
+                </div>
+            </div>
+            
+        </div>
+        {{/each}}
+        </div>
+        
+    </div>
+</div>

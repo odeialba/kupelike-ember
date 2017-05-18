@@ -1,5 +1,157 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="wrapper">
+    <!-- Navbar start -->
+    <nav class="navbar navbar-light bg-faded navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 p-x-0">
+                    <ul class="list-inline pull-right idiomas visible-md visible-lg visible-xl">
+                        <li class="es">{{link-to "ES" (query-params locale="es")}}</li>
+	                    |
+	                    <li class="eus">{{link-to "EUS" (query-params locale="eu")}}</li>
+	                    |
+	                    <li class="en">{{link-to "EN" (query-params locale="en")}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 navbar-header hidden-md hidden-lg">
+                    <a id="navbar-ham" class="navbar-ham toggle-button visible-xs visible-sm"><i class="fa fa-bars fa-4x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-4 col-lg-3 navbar-header p-x-0">
+                    {{#link-to 'index' class="navbar-title" id="navbar-title"}}
+					    Kupe<img class="img-logo"/>Like
+					{{/link-to}}
+     			</div>
+                <div class="col-md-7 col-lg-8 desktop-menu visible-md visible-lg p-x-0">
+                    <ul class="desktop-menu-links">
+                        <li>{{link-to (t 'paginas_estaticas.menu.sidrerias') "places" class='btn-margin'}}</li>
+                        <li>{{link-to (t 'paginas_estaticas.menu.mapa') "maps" class='btn-margin'}}</li>
+	                    {{!--<li>{{link-to (t 'paginas_estaticas.menu.mapa') "map" class='btn-margin'}}</li>--}}
+	                    <li>{{link-to (t 'paginas_estaticas.menu.contacto') "contact" class='btn-margin'}}</li>
+                    </ul>  
+                </div>
+                {{search-box value=menu.searchText}}
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar END -->
+    
+    <!-- Search erantzunak -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 searchResults" id="searchResults">
+                {{#each menu.placesFiltered as |place|}}
+                    {{!--{{place.name}}--}}
+                    <hr class='search-hr'><div class='row'>
+                        {{!--{{#link-to 'place' place name=place.name}}--}}
+                        {{!--<a name='{{place.name}}' href='"+route+"'>--}}
+                            <div class='col-xs-offset-2 col-xs-5'>
+                                {{#link-to 'place' place name=place.name}}<h2 class='card-title text-uppercase'>{{place.name}}</h2>{{/link-to}}
+                                <div class='card-margen-20'>
+                                    {{#link-to 'place' place name=place.name}}<p class='card-description' id='descripcion'>{{place.description}}</p>{{/link-to}}
+                                    {{#link-to 'map' place}}
+                                        <button type="button" class="btn btn-default">{{t 'paginas.sidrerias.llegar'}}</button>
+                                    {{/link-to}}
+                                </div>
+                            </div>
+                        {{!--</a>--}}
+                        {{!--{{/link-to}}--}}
+                        {{#link-to 'place' place name=place.name}}
+                        {{!--<a name='"+attributes.name+"' href='"+route+"'>--}}
+                            <div class='col-xs-4'>
+                                <div class='card-sidreria'>
+                                    <img class='img-responsive img-search' src='{{place.picture}}'>
+                                </div>
+                            </div>
+                        {{!--</a>--}}
+                        {{/link-to}}
+                    </div>
+                {{/each}}
+                {{!--{{menu.searchText}}--}}
+            </div>
+        </div>
+    </div>
+    <!-- Search erantzunak END -->
+    
+    <!-- Menu desplegable izquierda -->
+    <div class="menu">
+    <span><i class="fa fa-times fa-2x pull-right close-menu" aria-hidden="true"></i></span>
+        <ul class="list-inline idiomas-side">
+            <li class="es">{{link-to "ES" (query-params locale="es")}}</li>
+	        |
+	        <li class="eus">{{link-to "EUS" (query-params locale="eu")}}</li>
+	        |
+	        <li class="en">{{link-to "EN" (query-params locale="en")}}</li>
+        </ul>
+        <ul class="menu-links">
+            {{!--{{menu-active (t 'paginas_estaticas.menu.inicio') index}}--}}
+            {{#link-to 'index' class=(menu-active 'index' menu.page) action='menuClick'}}<li>{{t 'paginas_estaticas.menu.inicio'}}</li>{{/link-to}}
+            {{#link-to 'places' class=(menu-active 'places' menu.page)}}<li>{{t 'paginas_estaticas.menu.sidrerias'}}</li>{{/link-to}}
+            {{#link-to 'maps' class=(menu-active 'maps' menu.page)}}<li>{{t 'paginas_estaticas.menu.mapa'}}</li>{{/link-to}}
+            {{#link-to 'contact' class=(menu-active 'contact' menu.page)}}<li>{{t 'paginas_estaticas.menu.contacto'}}</li>{{/link-to}}
+            {{#link-to 'about_us' class=(menu-active 'about_us' menu.page)}}<li>{{t 'paginas_estaticas.menu.nosotros'}}</li>{{/link-to}}
+        </ul>
+    </div>
+    <!-- Menu desplegable izquierda END -->
+            
+    <!-- IMPORTANTE -> Todos los ficheros que se cargen en el block body deben empezar con un div container-fluid!!!!
+    PERO SU ETIQUETA DE CIERRE CORRESPONDIENTE NO HACE FALTA!!!-->
+        {{outlet}}
+    <div class="push"></div>
+</div>
+<div class="container-fluid">
+    <!-- Footer start -->
+    <div class="row footer text-center">
+        <div class="col-xs-12">
+            
+            <div class="row">
+                <div class="col-xs-12 font-face-primary p-footer"> 
+                    
+                    <ul class="list-inline ftitle">
+                        
+                        <li><a href="https://www.facebook.com/kupelike" target="_blank">
+                            <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x btn-social"></i>
+                              <i class="fa fa-facebook fa-stack-1x fa-inverse btn-social-inner" aria-hidden="true"></i>
+                            </span>
+                        </a></li>
+                        <li><a href="https://twitter.com/KupeLike" target="_blank"><span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x btn-social"></i>
+                              <i class="fa fa-twitter fa-stack-1x fa-inverse btn-social-inner" aria-hidden="true"></i>
+                            </span>
+                        </a></li>
+                        <li><a href="https://www.instagram.com/kupelike" target="_blank"><span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x btn-social"></i>
+                              <i class="fa fa-instagram fa-stack-1x fa-inverse btn-social-inner" aria-hidden="true"></i>
+                            </span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 font-face-primary"> 
+                    <ul class="list-inline footer-menu text-uppercase footer-menu-site">
+                    	<li>{{link-to (t 'paginas_estaticas.footer.inicio') "index"}}</li>
+                        <li>{{link-to (t 'paginas_estaticas.footer.mapa') "maps"}}</li>
+                        <li>{{link-to (t 'paginas_estaticas.footer.sidrerias') "places"}}</li>
+                        <li>{{link-to (t 'paginas_estaticas.footer.contacto') "contact"}}</li>
+                        <li>{{link-to (t 'paginas_estaticas.footer.nosotros') "about_us"}}</li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 font-face-primary"> 
+                    <ul class="list-unstyled footer-menu green-color footer-menu-contact">
+                        <li><a href="tel:655555555"><i class="fa fa-phone-square" aria-hidden="true"></i> +34 655 55 55 55</a></li>
+                        <li><a href="mailto:kupelikeproject@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> kupelikeproject@gmail.com</a></li>
+                        <li><a href="https://www.google.es/maps/place/Instituto+de+Educaci%C3%B3n+Secundaria+Xabier+Zubiri+Manteo/@43.3274463,-1.9710159,20z/data=!4m5!3m4!1s0x0:0x8654b5f1f9a490ae!8m2!3d43.3274118!4d-1.9708255"><i class="fa fa-map-marker" aria-hidden="true"></i>José Miguel Barandiarán, 10-12, 20013 San Sebastián</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 subfooter">   
+            Copyright © 2017 KupeLike - All Rights Reserved - <a href="/privacy" class="">Privacy</a>
+        </div>
+        <hr class="fline"/>
+    </div>
+    <!-- Footer END -->
+</div><!-- .container-fluid -->

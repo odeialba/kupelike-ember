@@ -1,0 +1,167 @@
+export default {
+  "paginas_estaticas": {
+      "menu": {
+          "inicio": "Hasiera",
+          "mapa": "Mapa",
+          "sidrerias": "Sagardotegiak",
+          "contacto": "Kontaktua",
+          "nosotros": "Guri buruz",
+          "acceder": {
+              "usuario": "Erabiltzailea",
+              "contrasena": "Pasahitza",
+              "acceder": "Atzitu",
+              "red": "Oraindik ez al zara gure sareko parte?"
+          },
+          "accederr": "Atzitu / Erregistratu",
+          "admuser": "Erabiltzaileak kudeatu",
+          "admsidre": "Sagardotegiak kudeatu",
+          "misidre": "Nire sagardotegia",
+          "perfil": "Nire profila",
+          "change_password": "Aldatu nire pasahitza",
+          "ayuda": "Laguntza",
+          "salir": "Irten",
+          "buscar": "Bilatu"
+      },
+      "landing": {
+          "txotx": "Elkarrizketa on bat beti Txotx! batekin hasten da.",
+          "subtitulo": "Zure laguntzarekin, gure kulturako tradiziorik famatuena bizirik mantentzen dugu.",
+          "encuentra": "Zure sagardotegia aurkitu"
+      },
+      "footer": {
+          "inicio": "Hasiera",
+          "mapa": "Mapa",
+          "sidrerias": "Sagardotegiak",
+          "contacto": "Kontaktua",
+          "nosotros": "Nor gara?"
+      }
+  },
+  "labels": {
+      "usuario": {
+          "nombre": "Izena:",
+          "apellidos": "Abizenak:",
+          "sidreria": "Sagardotegia:",
+          "telefono": "Telefonoa:",
+          "email": "Emaila:",
+          "username": "Erabiltzaile izena:",
+          "acciones": "Akzioak:"
+      },
+      "kupela": {
+          "nombre": "Izena:",
+          "descripcion": "Deskribapena:",
+          "ano": "Urtea:",
+          "foto": "Argazkia:"
+      },
+      "sidreria": {
+          "nombre": "Izena:",
+          "descripcion": "Deskribapena:",
+          "horario": "Txotx ordutegia:",
+          "foto": "Argazkia:",
+          "ubicacion": "Kokalekua:",
+          "direccion": "Helbidea:",
+          "coordenadas": "Koordenadak:",
+          "acciones": "Akzioak:",
+          "telefono": "Telefonoa",
+          "email": "Posta-elektronikoa"
+      },
+      "registro": {
+          "nombreyape": "Izen eta abizenak:",
+          "email": "Emaila:",
+          "phone": "Kontaktu telefono zenbakia:",
+          "nombresidre": "Sagardotegiaren izena:",
+          "direccion": "Helbidea:",
+          "descripcion": "Deskribapena:"
+      }
+  },
+  "boton": {
+      "actualizar": "Eguneratu",
+      "acceder": "Atzitu",
+      "aviso": "Abisua jaso",
+      "cancelar": "Ezeztatu",
+      "change_password": "Aldatu nire pasahitza",
+      "crear": "Sortu",
+      "editar": "Eguneratu",
+      "eliminar": "Ezabatu",
+      "embotellado": "Botilaratuta",
+      "enviar": "Bidali",
+      "guardar": "Gorde",
+      "manage": "Kudeatu",
+      "modificar": "Aldatu",
+      "mostrar": "Ikusi",
+      "selfoto": "Argazkia hautatu",
+      "stats": "Estatistikak"
+  },
+  "titulos": {
+      "mapa": "Mapa",
+      "sidrerias": "Sagardotegiak",
+      "contacto": "Gurekin kontaktatu",
+      "nosotros": "Guri buruz",
+      "acceder": "Atzitu",
+      "editperfil": "Profila eguneratu",
+      "editusuario": "Erabiltzailea eguneratu",
+      "editkupela": "Kupela eguneratu",
+      "editsidre": "Sagardotegia eguneratu",
+      "newkupela": "Kupel berria",
+      "newsidre": "Sagardotegi berria",
+      "newusuario": "Erabiltzaile berria",
+      "contrasena": "Pasahitza aldatu",
+      "perfilsidre": "Sagardotegiaren profila",
+      "listakupelas": "Kupelen zerrenda",
+      "login": "KupeLike-era atzitu"
+  },
+  "alerts": {
+      "voto": {
+          "mas": "Botoa ongi gehitu da!",
+          "menos": "Botoa ongi ezabatu da!"
+      },
+      "aviso": {
+          "mas": "Kupela boteilaratzean abisu bat jasoko duzu!",
+          "menos": "Kupela boteilaratzean EZ duzu abisurik jasoko!"
+      },
+      "votoaviso": {
+          "mas": "Botoa ongi gehitu da!\nKupela boteilaratzean abisu bat jasoko duzu!",
+          "menos": "Botoa ongi ezabatu da!\nKupela boteilaratzean EZ duzu abisurik jasoko!"
+      }
+  },
+  "paginas": {
+      "mapa": {
+          "titulo": "Mapa"
+      },
+      "sidrerias": {
+          "titulo": "Sagardotegiak",
+          "llegar": "Jarraibideak",
+          "contacto": "Kontaktua"
+      },
+      "contacto": {
+          "titulo": "Gurekin kontaktatu",
+          "nombre": "Zure izen eta abizenak adierazi",
+          "email": "Zure Email-a adierazi",
+          "motivo": "Zure kontsulta adierazi, lehen bait lehen erantzun ahal izateko.",
+          "enviar": "Bidali"
+      },
+      "nosotros": {
+          "titulo": "Guri buruz",
+          "texto1": "Mondragoneko unibertsitateko Liderazgo Emprendedor e Innovación ikasleengatik, I.E.S Zubiri Manteo B.H.I. ikastetxeko Web Aplikazio Garapeneko eta CIFP Don Bosco LHII ikastetxeko Mantenimiento electrónico ikasleen kolaborazioarekin, KupeLike izeneko aplikazio berri bat garatua izan da.",
+          "texto2": "KupeLike-k, euskal sagardotegiak eta hauen kupelak erakusten ditu, kupel bakoitzeko bozkatzeko eta erreputazio sistema batekin. Boto kopurua aplikazioan agertzeaz gain, kupel bakoitzean egongo diren pantaila batzuetan ere agertuko dira.",
+          "texto3": "Erabiltzaileen intereserako, informazio eguneratua eta mapa interaktiboa ere izango ditu."
+          // #"texto2": ""
+          // #"texto3": ""
+          // #"texto4": ""
+          // #"texto5": ""
+      },
+      "slider": {
+          "desarrollo": "Web Aplikazio Garatzailea"
+      },
+      "registrasidre": {
+          "titulo": "Zure sagardotegia erregistratu",
+          "subtitulo": "Formulario hau bete ezazu KupeLike komunitatean parte hartzeko",
+          "merece": "Zure sagardoak merezi du!"
+      },
+      "login": {
+          "titulo": "KupeLike-era atzitu",
+          "usuario": "Erabiltzailea",
+          "contrasena": "Pasahitza",
+          "cuenta": "Ez duzu konturik?",
+          "solicitar": "Aplikaziora atzipena eskatu"
+      }
+  }
+};

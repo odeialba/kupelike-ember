@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="mtitle text-center">{{t 'paginas.sidrerias.titulo'}}</h1>
+        </div>
+        {{#each model as |place|}}
+            <div class="col-xs-6 col-lg-4">
+                <div class="card">
+                	{{#link-to 'place' place class='card-link'}}
+        	            <div class="card-direction text-uppercase text-center"><h4>{{place.town}}</h4></div>
+        	            <img class="card-image img-responsive" src="{{place.picture}}">
+        	            <h2 class="card-title text-uppercase">{{place.name}}</h2>
+        	            <p class="card-description">{{place.description}}</p>
+                    {{/link-to}}
+                </div>
+            </div>
+        {{/each}}
+        {{!--{{#each model as |place|}}--}}
+        {{!--    {{place.name}}<br/>--}}
+        {{!--    {{#each place.items as |item|}}--}}
+        {{!--        {{item.name}}--}}
+        {{!--    {{/each}}--}}
+        {{!--{{/each}}--}}
+    </div>
+</div>
