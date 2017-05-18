@@ -4,8 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'kupelike',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '',
+    // rootURL: '/',
+    // locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
