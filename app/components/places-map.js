@@ -34,7 +34,7 @@ export default Ember.Component.extend({
             secondChild2.style.margin = '5px';
             secondChild2.style.width = '18px';
             secondChild2.style.height = '18px';
-            secondChild2.style.backgroundImage = 'url("/img/logo_transp18.png")';
+            secondChild2.style.backgroundImage = 'url("img/logo_transp18.png")';
             secondChild2.style.backgroundSize = '18px 18px';
             secondChild2.style.backgroundPosition = '0px 0px';
             secondChild2.style.backgroundRepeat = 'no-repeat';
@@ -76,7 +76,7 @@ export default Ember.Component.extend({
             secondChild.style.margin = '5px';
             secondChild.style.width = '18px';
             secondChild.style.height = '18px';
-            secondChild.style.backgroundImage = 'url("/img/mylocation-sprite-1x.png")';
+            secondChild.style.backgroundImage = 'url("img/mylocation-sprite-1x.png")';
             secondChild.style.backgroundSize = '180px 18px';
             secondChild.style.backgroundPosition = '0px 0px';
             secondChild.style.backgroundRepeat = 'no-repeat';
@@ -164,13 +164,13 @@ export default Ember.Component.extend({
           
           
           //Creando los iconos
-          var kupImg="/img/logoblanco35.png";
+          var kupImg="img/logoblanco35.png";
       		var sagarImg={
       			url:kupImg,
       			size: new google.maps.Size(35, 35)
       		};
   		
-      		var perImg="/img/personaPos.png";
+      		var perImg="img/personaPos.png";
       		var persImg={
       			url:perImg,
       			size: new google.maps.Size(35, 35)
