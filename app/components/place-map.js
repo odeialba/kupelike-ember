@@ -17,8 +17,8 @@ export default Ember.Component.extend({
             }
           }
           // var that = this;
-          var map;
-          var user;
+          // var map;
+          // var user;
           var centerControlDiv = document.createElement('div');
           var centerControlDiv2 = document.createElement('div');
           var mv = 0;
@@ -179,19 +179,19 @@ export default Ember.Component.extend({
           //Creando los iconos
           var kupImg="img/logoblanco35.png";
           //var kupImg="https://kupelike-oalba.c9users.io/img/botellasidra2.png";
-      		var sagarImg={
-      			url:kupImg,
-      			size: new google.maps.Size(35, 35)
-      		};
-  		
-      		var perImg="img/personaPos.png";
-      		//var perImg="https://kupelike-oalba.c9users.io/img/personaPos.png";
-      		var persImg={
-      			url:perImg,
-      			size: new google.maps.Size(35, 35)
-      		};
-  		
-  		    //Colocando marcadores
+          var sagarImg={
+            url:kupImg,
+            size: new google.maps.Size(35, 35)
+          };
+      
+          var perImg="img/personaPos.png";
+          //var perImg="https://kupelike-oalba.c9users.io/img/personaPos.png";
+          var persImg={
+            url:perImg,
+            size: new google.maps.Size(35, 35)
+          };
+      
+          //Colocando marcadores
           var sagarPos = new google.maps.LatLng(item.get('latitude'),item.get('longitude'));
           var sagardotegi = new google.maps.Marker({
             position: sagarPos,
@@ -200,7 +200,8 @@ export default Ember.Component.extend({
             title: item.get('name'),
             icon: sagarImg
           });
-          var centerControl2 = new CenterControl2(centerControlDiv2, map, sagarPos);
+          // var centerControl2 = new CenterControl2(centerControlDiv2, map, sagarPos);
+          new CenterControl2(centerControlDiv2, map, sagarPos);
           
           infowindow.setContent('<a href="google.navigation:q='+item.get('latitude')+','+item.get('longitude')+'">'+item.get('name')+'<br>'+item.get('address')+'</a>');
           sagardotegi.addListener('click', function() {
@@ -215,14 +216,16 @@ export default Ember.Component.extend({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               };
-              var persona = new google.maps.Marker({
+              // var persona = new google.maps.Marker({
+              new google.maps.Marker({
                 position: perPos,
                 animation: google.maps.Animation.DROP,
                 map: map,
                 title: 'Tu posición.',
                 icon: persImg
               });
-              var centerControl = new CenterControl(centerControlDiv, map, perPos);
+              // var centerControl = new CenterControl(centerControlDiv, map, perPos);
+              new CenterControl(centerControlDiv, map, perPos);
             });
           }
   

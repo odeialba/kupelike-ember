@@ -42,6 +42,7 @@ export default Ember.Component.extend({
             function (error) { 
                 // window.location = this.transitionToRoute('index2');
                 // that.transitionToRoute('index2');
+                // console.log(error);
                 Ember.run.scheduleOnce('afterRender', function(){
                     that.sendAction('transitionTo', 'index2');
                 })

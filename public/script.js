@@ -261,7 +261,7 @@ setTimeout(cambiarActive, 1000);
 
 
 
-
+// if(typeof(window.cordova) == "undefined"){}
 /* Facebook */
 window.fbAsyncInit = function() {
     // iniciamos la aplicación de Facebook

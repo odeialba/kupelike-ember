@@ -6,8 +6,8 @@ export default Ember.Component.extend({
   /* global navigator */
     didInsertElement:function(){
         var that = this;
-    var map;
-          var user;
+    // var map;
+          // var user;
           var centerControlDiv = document.createElement('div');
           var centerControlDiv2 = document.createElement('div');
           var mv = 0;
@@ -165,25 +165,25 @@ export default Ember.Component.extend({
           
           //Creando los iconos
           var kupImg="img/logoblanco35.png";
-      		var sagarImg={
-      			url:kupImg,
-      			size: new google.maps.Size(35, 35)
-      		};
-  		
-      		var perImg="img/personaPos.png";
-      		var persImg={
-      			url:perImg,
-      			size: new google.maps.Size(35, 35)
-      		};
-  		
-  		
-  		    // Añadiendo marcadores y Centrando el mapa//////////////////////////////////
-  		
-  		    //create empty LatLngBounds object
+          var sagarImg={
+            url:kupImg,
+            size: new google.maps.Size(35, 35)
+          };
+      
+          var perImg="img/personaPos.png";
+          var persImg={
+            url:perImg,
+            size: new google.maps.Size(35, 35)
+          };
+      
+      
+          // Añadiendo marcadores y Centrando el mapa//////////////////////////////////
+      
+          //create empty LatLngBounds object
           var bounds = new google.maps.LatLngBounds();
           var infowindow = new google.maps.InfoWindow();  
-  		that.get('items').forEach(function(item){
-  		    var mas = {  
+      that.get('items').forEach(function(item){
+          var mas = {  
               position: {
                 lat: item.get('latitude'),
                 lng: item.get('longitude')
@@ -215,11 +215,12 @@ export default Ember.Component.extend({
             })(marker, nombre);
   
             bounds.extend(marker.position);
-  		})
+      })
 
           //now fit the map to the newly inclusive bounds
           map.fitBounds(bounds);
-          var centerControl2 = new CenterControl2(centerControlDiv2, map, bounds);
+          // var centerControl2 = new CenterControl2(centerControlDiv2, map, bounds);
+          new CenterControl2(centerControlDiv2, map, bounds);
           
           ///////////////////////////////////////////////////////////////////////////
           
@@ -230,14 +231,16 @@ export default Ember.Component.extend({
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
               };
-              var persona = new google.maps.Marker({
+              // var persona = new google.maps.Marker({
+              new google.maps.Marker({
                 position: perPos,
                 animation: google.maps.Animation.DROP,
                 map: map,
                 title: 'Tu posición.',
                 icon: persImg
               });
-              var centerControl = new CenterControl(centerControlDiv, map, perPos);
+              // var centerControl = new CenterControl(centerControlDiv, map, perPos);
+              new CenterControl(centerControlDiv, map, perPos);
             });
           }
           centerControlDiv.index = 1;
