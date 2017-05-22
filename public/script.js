@@ -261,16 +261,19 @@ setTimeout(cambiarActive, 1000);
 
 
 
-// if(typeof(window.cordova) == "undefined"){}
+
 /* Facebook */
 window.fbAsyncInit = function() {
+  if(typeof(window.cordova) != "undefined"){
+    FB = window.facebookConnectPlugin;
+  } 
     // iniciamos la aplicación de Facebook
-    FB.init({
-        appId      : '765683296917544',
-        status     : true,
-        xfbml      : true,
-        cookie     : true
-    });
+    // FB.init({
+    //     appId      : '765683296917544',
+    //     status     : true,
+    //     xfbml      : true,
+    //     cookie     : true
+    // });
     
     // si no está conectado, muestra la ventana de conexión
     $(document).on("click", ".btn-facebook, .btn-aviso", function(){
@@ -316,7 +319,7 @@ function getAPI(idItem, button){
                 'Accept':'application/json'//,
                 // 'Content-Type':'application/json'
             },
-            data: {response, item_id: idItem, button: button },
+            data: {response: response, item_id: idItem, button: button },
             success: function (response) {
               if (window.fb_user == response.user_id){
                 alert(response.aviso);
