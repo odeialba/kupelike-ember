@@ -34,6 +34,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <allow-navigation href="http://192.168.88.41:4200" name="ec-nav" />
     <engine name="android" spec="~6.1.2" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="~2.3.0">
         <variable name="XWALK_VERSION" value="23+" />

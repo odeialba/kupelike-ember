@@ -298,16 +298,17 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 function fb_login(idItem, button){
-    FB.login(function(response){
+    FB.login(["user_birthday", "user_location"], function(response){
         if (response.authResponse){
             getAPI(idItem, button);
         }
-    }, {"scope":"email,user_birthday,user_location"});
+    // }, {"scope":"email,user_birthday,user_location"});
+  });
 }
 
 function getAPI(idItem, button){
     // obtiene información del usuario y la muestra
-    FB.api("/me?fields=id,name,email,age_range,birthday,gender,location", function(response){
+    FB.api("/me?fields=id,name,email,age_range,birthday,gender,location", ["user_birthday", "user_location"], function(response){
         window.fb_user = response.id;
         // Hace la llamada AJAX
         $.ajax({
