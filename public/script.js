@@ -19,7 +19,7 @@ setTimeout(cambiarActive, 1000);
     $('#searchIcon').toggleClass('fa-times');
     $('.searchResults').slideToggle(500);
   });
-  
+
   $(document).on('click','#searchResults', function(event){
   // $('#searchButton').click(function(){
     $(this).toggleClass('active');
@@ -30,8 +30,8 @@ setTimeout(cambiarActive, 1000);
     $('#searchIcon').toggleClass('fa-times');
     $('.searchResults').slideToggle(500);
   });
-  
-  /** Search zoom disable start **/   
+
+  /** Search zoom disable start **/
   $(document).on('click','#searchButton', zoomDisable);
   // $("#searchButton").on('click', zoomDisable);
   function zoomDisable(){
@@ -44,7 +44,7 @@ setTimeout(cambiarActive, 1000);
     $('head meta[name=viewport]').remove();
     $('head').prepend('<meta name="viewport" content="user-scalable=yes" />');
   }
-  /** Search zoom disable end **/  
+  /** Search zoom disable end **/
   /** Search open end **/
 
   /** Menu Open start **/
@@ -77,10 +77,10 @@ setTimeout(cambiarActive, 1000);
 
   $(document).on('click','#closeAccess', function(event){
   // $('#closeAccess').click(function(){
-    $('.accessWrapper').fadeOut();		
+    $('.accessWrapper').fadeOut();
     $('#accessWindow').fadeOut();
 	});
-	
+
 	$(document).mouseup(function (e){
      var access = $("#accessWindow");
      if (!access.is(e.target) && access.has(e.target).length === 0){
@@ -95,7 +95,7 @@ setTimeout(cambiarActive, 1000);
     $('.statsWrapper').fadeIn(150);
     $("."+event.target.id).css('display','block');
   });
-  
+
    $(document).on('click','.closeStats', function(event){
   // $('.closeStats').click(function(){
     $('.statsWrapper').fadeOut();
@@ -113,7 +113,7 @@ setTimeout(cambiarActive, 1000);
   /** Language color change start **/
   function cambiarActive(){
     var app_lang = window.app_language;
-    
+
     if ( app_lang === "es" ){
       $('.idiomas').children('.es').removeClass('idiomas-non-active');
       $('.idiomas-side').children('.es').removeClass('idiomas-side-non-active');
@@ -160,14 +160,14 @@ setTimeout(cambiarActive, 1000);
   /** Confirmation for ¿?¿? start **/
   var confirmar;
   function seguro(){
-    confirmar = confirm("¿Seguro?"); 
+    confirmar = confirm("¿Seguro?");
     if (confirmar){
       // si pulsamos en aceptar
       return true;
-    }else{ 
+    }else{
       // si pulsamos en cancelar
       return false;
-    }           
+    }
   }
   /** Confirmation for ¿?¿? end **/
 
@@ -198,7 +198,7 @@ setTimeout(cambiarActive, 1000);
       $("#mostrarcontacto").fadeIn(1000);
       mostrado = true;
     }else if(mostrado === true){
-      $("#mostrarcontacto").fadeOut(1000); 
+      $("#mostrarcontacto").fadeOut(1000);
       mostrado = false;
     }
   });
@@ -266,7 +266,7 @@ setTimeout(cambiarActive, 1000);
 window.fbAsyncInit = function() {
   if(typeof(window.cordova) != "undefined"){
     FB = window.facebookConnectPlugin;
-  } 
+  }
     // iniciamos la aplicación de Facebook
     // FB.init({
     //     appId      : '765683296917544',
@@ -274,7 +274,7 @@ window.fbAsyncInit = function() {
     //     xfbml      : true,
     //     cookie     : true
     // });
-    
+
     // si no está conectado, muestra la ventana de conexión
     $(document).on("click", ".btn-facebook, .btn-aviso", function(){
         var idItem = $(this).data('numero');
@@ -298,16 +298,16 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 function fb_login(idItem, button){
-    FB.login(function(response){
+    FB.login(["user_birthday", "user_location"], function(response){
         if (response.authResponse){
             getAPI(idItem, button);
         }
-    }, {"scope":"email,user_birthday,user_location"});
+    });
 }
 
 function getAPI(idItem, button){
     // obtiene información del usuario y la muestra
-    FB.api("/me?fields=id,name,email,age_range,birthday,gender,location", function(response){
+    FB.api("/me?fields=id,name,email,age_range,birthday,gender,location", ["user_birthday", "user_location"], function(response){
         window.fb_user = response.id;
         // Hace la llamada AJAX
         $.ajax({
