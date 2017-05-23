@@ -273,7 +273,7 @@ body::-webkit-scrollbar-thumb {
 .menu-links li {
     
     /*padding-top: 40px;*/
-    padding-left: 55px;
+    padding-left: 35px;
     list-style: none;
     /*height: 140px;*/
     height: 150px;
@@ -1352,7 +1352,7 @@ input:checked + .slider:before {
     } 
     
     .formulario {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
     
     .navbar-title {
@@ -1380,10 +1380,11 @@ input:checked + .slider:before {
     
     .idiomas-side {
         font-size: 2.5em;
+        margin-left: 5px;
     }
     
     .menu-links>a>li {
-        font-size: 4em;
+        font-size: 3.5em;
         display : flex;
         align-items : center;
     }
@@ -1496,7 +1497,7 @@ input:checked + .slider:before {
     }
     
     .formulario {
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
     
     .navbar-title {
@@ -1524,10 +1525,11 @@ input:checked + .slider:before {
     
     .idiomas-side {
         font-size: 2.5em;
+        margin-left: 5px;
     }
     
     .menu-links>a>li {
-        font-size: 4em;
+        font-size: 3.5em;
         display : flex;
         align-items : center;
     }
