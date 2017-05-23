@@ -3,28 +3,28 @@
 /* global filepicker */
 
 // $(document).ready(function($){
-$(document).ready(function(){
+// $(document).ready(function(){
   // document.body.style.zoom=1.0;this.blur();
-  if (orientation == "90" || orientation == "-90") {
-    // alert("Orientation is: Horizontal");
-    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0");
-    // document.body.style.zoom=1.0;this.blur();
-  } else {
-    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0");
-    // document.body.style.zoom=1.0;this.blur();
-  }
+  // if (orientation == "90" || orientation == "-90") {
+  //   // alert("Orientation is: Horizontal");
+  //   document.getElementById("viewport").setAttribute("content","user-scalable=no, width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1");
+  //   // document.body.style.zoom=1.0;this.blur();
+  // } else {
+  //   document.getElementById("viewport").setAttribute("content","user-scalable=no, width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5");
+  //   // document.body.style.zoom=1.0;this.blur();
+  // }
   // cambiarActive();
-});
+// });
 setTimeout(cambiarActive, 1000);
 
-$(window).on("orientationchange",function(event){
-  if (orientation == "90" || orientation == "-90") {
-    // alert("Orientation is: Horizontal");
-    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0");
-  } else {
-    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0");
-  }
-});
+// $(window).on("orientationchange",function(event){
+//   if (orientation == "90" || orientation == "-90") {
+//     // alert("Orientation is: Horizontal");
+//     document.getElementById("viewport").setAttribute("content","user-scalable=no, width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=2");
+//   } else {
+//     document.getElementById("viewport").setAttribute("content","user-scalable=no, width=device-width, height=device-height, initial-scale=1, minimum-scale=0.5, maximum-scale=0.5");
+//   }
+// });
 
   /** Search open start **/
   $(document).on('click','#searchButton', function(event){
@@ -80,7 +80,7 @@ $(window).on("orientationchange",function(event){
       event.preventDefault();
       var target = "#" + this.getAttribute('data-target');
       $('html, body').animate({
-          scrollTop: $(target).offset().top -80
+          scrollTop: $(target).offset().top -150
       }, 1500);
   });
   /** Scroll to Sagardotegiak end **/
