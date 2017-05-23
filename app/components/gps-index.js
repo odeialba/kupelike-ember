@@ -39,7 +39,7 @@ export default Ember.Component.extend({
                 }
             })
           },
-            function (error) { 
+            function () { 
                 // window.location = this.transitionToRoute('index2');
                 // that.transitionToRoute('index2');
                 // console.log(error);

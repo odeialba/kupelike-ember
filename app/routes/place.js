@@ -11,7 +11,7 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this._super(...arguments);
     // var interval = 1000;
-    var that = this;
+    // var that = this;
     var five = function() {
       // model.then(function(json) {
       //   that.controller.set(model, json);

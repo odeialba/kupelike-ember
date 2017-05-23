@@ -3,10 +3,28 @@
 /* global filepicker */
 
 // $(document).ready(function($){
-// $(document).ready(function(){
-//   cambiarActive();
-// });
+$(document).ready(function(){
+  // document.body.style.zoom=1.0;this.blur();
+  if (orientation == "90" || orientation == "-90") {
+    // alert("Orientation is: Horizontal");
+    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0");
+    // document.body.style.zoom=1.0;this.blur();
+  } else {
+    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0");
+    // document.body.style.zoom=1.0;this.blur();
+  }
+  // cambiarActive();
+});
 setTimeout(cambiarActive, 1000);
+
+$(window).on("orientationchange",function(event){
+  if (orientation == "90" || orientation == "-90") {
+    // alert("Orientation is: Horizontal");
+    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0");
+  } else {
+    document.getElementById("viewport").setAttribute("content","width=device-width, height=device-height, initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=0");
+  }
+});
 
   /** Search open start **/
   $(document).on('click','#searchButton', function(event){
@@ -32,9 +50,9 @@ setTimeout(cambiarActive, 1000);
   });
   
   /** Search zoom disable start **/   
-  $(document).on('click','#searchButton', zoomDisable);
+  // $(document).on('click','#searchButton', zoomDisable);
   // $("#searchButton").on('click', zoomDisable);
-  function zoomDisable(){
+  /*function zoomDisable(){
     $('head meta[name=viewport]').remove();
     $('head').prepend('<meta name="viewport" content="user-scalable=no" />');
     setTimeout(zoomEnable, 1000);
@@ -43,7 +61,7 @@ setTimeout(cambiarActive, 1000);
   function zoomEnable(){
     $('head meta[name=viewport]').remove();
     $('head').prepend('<meta name="viewport" content="user-scalable=yes" />');
-  }
+  }*/
   /** Search zoom disable end **/  
   /** Search open end **/
 

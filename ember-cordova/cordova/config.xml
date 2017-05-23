@@ -9,13 +9,16 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="http://192.168.88.41:4200" name="ec-nav" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <!-- <preference name="EnableViewportScale" value="false" /> -->
     <platform name="android">
+        <preference name="EnableViewportScale" value="false" />
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="19" />
         <preference name="android-targetSdkVersion" value="25" />
@@ -34,7 +37,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <allow-navigation href="http://192.168.88.41:4200" name="ec-nav" />
     <engine name="android" spec="~6.1.2" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="~2.3.0">
         <variable name="XWALK_VERSION" value="23+" />

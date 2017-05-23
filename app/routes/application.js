@@ -14,9 +14,7 @@ export default Ember.Route.extend({
     if (params.locale){
       userLang = params.locale;
     }
-    if (locales.includes(userLang)) {
-      userLang = userLang
-    } else {
+    if (!locales.includes(userLang)) {
       userLang = "en"
     }
     this.set('i18n.locale', userLang);
