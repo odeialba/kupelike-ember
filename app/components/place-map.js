@@ -6,16 +6,16 @@ export default Ember.Component.extend({
   /* global navigator */
     didInsertElement:function(){
         var item = this.get('item');
-        
-        
-        
-        
-        
-        window.onload = function(){
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-              window.location = "google.navigation:q="+item.get('latitude')+","+item.get('longitude');
-            }
+        // window.location = "google.navigation:q="+item.get('latitude')+","+item.get('longitude');
+
+        // window.open("geo:0,0?q="+item.get('latitude')+","+item.get('longitude'), "_system");
+        window.launchnavigator.navigate([item.get('latitude'),item.get('longitude')]);
+
+        /*window.onload = function(){
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+            // window.location = "google.navigation:q="+item.get('latitude')+","+item.get('longitude');
           }
+        }*/
           // var that = this;
           // var map;
           // var user;

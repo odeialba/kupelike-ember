@@ -15,6 +15,12 @@
   // }
   // cambiarActive();
 // });
+// navigator.globalization.getPreferredLanguage(
+//     function (language) {alert('language: ' + language.value + '\n');},
+//     function () {alert('Error getting language\n');}
+// );
+
+
 setTimeout(cambiarActive, 1000);
 
 // $(window).on("orientationchange",function(event){

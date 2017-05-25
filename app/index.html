@@ -36,7 +36,7 @@
 
     {{content-for "head-footer"}}
   </head>
-  <body>
+  <body class="loading">
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
@@ -47,5 +47,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQWPiW2qkBRj4BXmEwFS2XMm2kzwKH82M&libraries=geometry"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <div class="loader"></div>
+    <style type="text/css">
+        body .loader {
+            display: none;
+            background: url('{{rootURL}}img/logo_transp.png') white no-repeat no-repeat center center;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        body.loading .loader {
+            display: block;
+        }
+    </style>
   </body>
 </html>
