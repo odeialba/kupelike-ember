@@ -346,7 +346,7 @@ body::-webkit-scrollbar-thumb {
 }*/
 
 .idiomas-side-active, .idiomas-side-active:hover, .idiomas-side-active:active,
-.idiomas-side-active:focus, .idiomas-side-active:visited {
+.idiomas-side-active:focus, .idiomas-side-active:visited, .idiomas-side-active > a:hover, .idiomas-side-active > a:link {
     
     color: white !important;
 }

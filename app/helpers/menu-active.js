@@ -4,7 +4,7 @@ export function menuActive(params/*, hash*/) {
 //   return params;
 // console.log(hash);
   // console.log(params);
-  var url = window.location.pathname;
+  var url = window.location.hash || window.location.pathname;
   // console.log(url);
     if (url.indexOf(params[0]) > -1){
         return "menu-links-active";

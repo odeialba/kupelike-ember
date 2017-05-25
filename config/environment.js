@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'kupelike',
     environment: environment,
     rootURL: '',
+    apiURL: 'https://kupelike-rails.herokuapp.com',
     // rootURL: '/',
     // locationType: 'auto',
     locationType: 'hash',

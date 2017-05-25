@@ -6,7 +6,8 @@
                 <h1 class="mtitle title-padding text-center">{{t 'paginas.contacto.titulo'}}</h1>
             </div>
             <div class="row">
-                <form class="contact_form" action="https://kupelike-rails.herokuapp.com/contact" method="post">
+                {{!-- <form class="contact_form" action="https://kupelike-rails.herokuapp.com/contact" method="post"> --}}
+                <form class="contact_form" {{action 'postEmail' on='submit'}}>
                     <input type="text" name="message[name]" placeholder="{{t 'paginas.contacto.nombre'}}" class="formulario" required="required">
                     <input type="email" name="message[email]" placeholder="{{t 'paginas.contacto.email'}}" class="formulario" required="required">
                     <textarea name="message[content]" placeholder="{{t 'paginas.contacto.motivo'}}" cols="40" rows="6" class="formulario" required="required"></textarea>
